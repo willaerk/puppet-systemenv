@@ -1,5 +1,5 @@
 class systemenv (
-  variables = {}
+  $variables = {}
 ) inherits systemenv::params {
 
   create_resources(systemenv::var, $variables)
