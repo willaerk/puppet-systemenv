@@ -1,3 +1,6 @@
-class systemenv {
-  require systemenv::params
+class systemenv (
+  variables = {}
+) inherits systemenv::params {
+
+  create_resources(systemenv::var, $variables)
 }
