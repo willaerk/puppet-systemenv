@@ -3,7 +3,7 @@ define systemenv::var (
   $varname = $name,
   $value = undef,
 ) {
-  require systemenv
+  include systemenv::params
 
   validate_re($ensure, '^present|absent$')
   validate_re($varname, '^[a-zA-Z][a-zA-Z0-9_]+')
